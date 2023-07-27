@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistic website template | Home</title>
+    <title>FlipSide MC | Головна</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Minimalistic website template</h1>
-            <p>Sample text</p>
+            <h1>FlipSide MC</h1>
+            <p>Офіційний сайт серверів FlipSide</p>
+            <nav>
+                <button class="nav-buttons" onclick="redirecttohome()">Головна</button>
+                <button class="nav-buttons" onclick="redirecttoservers()">Сервери</button>
+            </nav>
         </header>
-        <nav>
-            <button class="nav-buttons" onclick="redirecttohome()">Home</button>
-            <button class="nav-buttons" onclick="redirecttogames()">Page2</button>
-        </nav>
         <section>
             <h2>Section</h2>
             <p>Sample text</p>
@@ -23,10 +23,9 @@
         <section>
             <h2>Section with tags</h2>
             <div class="tag-selector">
-                <button class="tag-button" onclick="filterByTag('all')">All</button>
-                <button class="tag-button" onclick="filterByTag('Python')">Python</button>
-                <button class="tag-button" onclick="filterByTag('HTML5')">HTML5</button>
-                <button class="tag-button" onclick="filterByTag('Other')">Other</button>
+                <button class="tag-button" onclick="filterByTag('all')">Всі</button>
+                <button class="tag-button" onclick="filterByTag('rp')">РП</button>
+                <button class="tag-button" onclick="filterByTag('anarchy')">Анархія</button>
             </div>
             <ul class="repository-list">
                 <li data-tags="HTML5">
@@ -40,7 +39,7 @@
             </ul>
         </section>
         <footer>
-            <p>Template author GitHub: @JustHomka</p>
+            <p>©FlipSide Team & @JustHomka on GitHub</p>
         </footer>
     </div>
 
@@ -56,10 +55,10 @@
             });
         }
         function redirecttohome() {
-            window.location.href = "https://justhomka.github.io/minimalistic-website-template"
+            window.location.href = "https://mc.flipside.net.ua"
         }
-        function redirecttogames() {
-            window.location.href = "page2.html";
+        function redirecttoservers() {
+            window.location.href = "servers.html";
         }
     </script>
 </body>
