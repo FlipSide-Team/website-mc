@@ -26,16 +26,6 @@
     </div>
 
     <script>
-        function filterByTag(tag) {
-            const repositoryItems = document.querySelectorAll('.repository-list li');
-            repositoryItems.forEach(item => {
-                if (tag === 'all' || item.dataset.tags.includes(tag)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
         /* page redirects */
         function redirecttohome() {
             window.location.href = "https://mc.flipside.net.ua"
