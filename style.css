@@ -68,6 +68,11 @@ footer {
 }
 
 /* repo links */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
 .repository-list li {
     position: relative;
     margin-bottom: 1rem;
