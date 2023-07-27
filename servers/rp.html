@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipSide MC | Головна</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FlipSide MC</h1>
+            <p>Офіційний сайт серверів FlipSide</p>
+            <nav>
+                <button class="nav-buttons" onclick="redirecttohome()">Головна</button>
+                <button class="nav-buttons" onclick="redirecttoservers()">Сервери</button>
+            </nav>
+        </header>
+        <section>
+            <h2>🎭FlipSide RP</h2>
+            <p>Приватний україномовний РП сервер на версії 1.20.1</p>
+            <button class="standart-button" onclick="rp_discord()">Discord</button>
+            <button class="standart-button" onclick="rp_map()">Мапа</button>
+            <button class="standart-button" onclick="copyip()">rp.flipside.net.ua</button>
+            <h2>Що треба знати перед грою</h2>
+            <li>Айпі rp.flipside.net.ua</li>
+            <li>Версія 1.20.1</li>
+            <li>Ліцензія для гри НЕ потрібна</li>
+            <li>Для гри обов'язково потрібен Discord</li>
+        </section>
+        <footer>
+            <p>©FlipSide Team & @JustHomka on GitHub</p>
+        </footer>
+    </div>
+
+    <script>
+        /* page redirects */
+        function redirecttohome() {
+            window.location.href = "https://mc.flipside.net.ua";
+        }
+        function redirecttoservers() {
+            window.location.href = "https://mc.flipside.net.ua/servers.html";
+        }
+        /* other redirects */
+        function rp_discord() {
+            window.location.href = "https://discord.gg/5DRCKTRhy3";
+        }
+        function rp_map() {
+            window.location.href = "https://rp.flipside.net.ua";
+        }
+    </script>
+</body>
+</html>

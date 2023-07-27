@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistic website template | page2</title>
+    <title>FlipSide MC | Сервери</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Minimalistic website template</h1>
-            <p>template version of https://justhomka.github.io/</p>
+            <h1>FlipSide MC</h1>
+            <p>Офіційний сайт серверів FlipSide</p>
+            <nav>
+                <button class="nav-buttons" onclick="redirecttohome()">Головна</button>
+                <button class="nav-buttons" onclick="redirecttoservers()">Сервери</button>
+            </nav>
         </header>
         <nav>
             <button class="nav-buttons" onclick="redirecttohome()">Home</button>
@@ -20,17 +24,40 @@
             <h2>Section</h2>
             <p>Sample text</p>
         </section>
+        <section>
+            <h2>🕹️Сервери</h2>
+            <div class="tag-selector">
+                <button class="tag-button" onclick="filterByTag('all')">Всі</button>
+                <button class="tag-button" onclick="filterByTag('rp')">РП</button>
+                <button class="tag-button" onclick="filterByTag('anarchy')">Анархія</button>
+            </div>
+            <ul class="repository-list">
+                <li data-tags="rp">
+                    <a href="servers/rp.html" target="_blank">РП | FlipSide RP</a>
+                    <p>Приватний україномовний РП сервер на версії 1.20.1</p>
+                </li>
+                <li data-tags="HTML5">
+                    <a href="https://github.com/JustHomka/minimalistic-website-template" target="_blank">Анархія | FlipSide Multiverse</a>
+                    <p>Сервер з різними режимами доступний з версії 1.16.5 і вище. На старті доступний режим Анархії</p>
+                </li>
+            </ul>
+        </section>
         <footer>
             <p>Template author GitHub: @JustHomka</p>
         </footer>
     </div>
 
     <script>
+        /* page redirects */
         function redirecttohome() {
-            window.location.href = "https://justhomka.github.io/minimalistic-website-template"
+            window.location.href = "https://mc.flipside.net.ua"
         }
-        function redirecttogames() {
-            window.location.href = "page2.html";
+        function redirecttoservers() {
+            window.location.href = "servers.html";
+        }
+        /* discord redirects */
+        function rp_discord() {
+            window.location.href = "https://discord.gg/5DRCKTRhy3";
         }
     </script>
 </body>
