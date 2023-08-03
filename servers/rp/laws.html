@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="FlipSide RP">
+    <meta property="og:title" content="FlipSide RP | Закони">
     <meta property="og:description" content="Офіційна сторінка серверу FlipSide RP Сезон 3">
     <meta property="og:image" content="https://mc.flipside.net.ua/img/embed.png">
     <meta property="og:url" content="https://mc.flipside.net.ua/servers/rp.html">
@@ -30,19 +30,22 @@
             <button class="standart-button" onclick="rp_donate()">Донат</button>
             <button class="standart-button" onclick="rp_laws()">Закони</button>
             <button class="standart-button">rp.flipside.net.ua</button>
-            <h2>Що треба знати перед грою</h2>
-            <li>Айпі rp.flipside.net.ua</li>
-            <li>Версія 1.20.1</li>
-            <li>Ліцензія для гри НЕ потрібна</li>
-            <li>Для гри обов'язково потрібен Discord</li>
         </section>
         <section>
-            <h2>💬Discord сервер</h2>
-            <iframe src="https://discord.com/widget?id=892661114654060574&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        </section>
-        <section>
-            <h2>📺Моніторинги</h2>
-            <a href="https://minecraft.org.ua/minecraft-servers/go/2410" target="_blank"><img src="https://minecraft.org.ua/x.php?2410"></a>
+            <h2>📕Закони</h2>
+            <div class="tag-selector">
+                <button class="tag-button" onclick="filterByTag('all')">Всі</button>
+                <button class="tag-button" onclick="filterByTag('theft')">Про крадіжки</button>
+                <button class="tag-button" onclick="filterByTag('cities')">Про міста</button>
+            </div>
+            <ul class="repository-list">
+                <li data-tags="theft">
+                    <a href="servers/rp.html" target="_blank">Частина 1 | Про крадіжки</a>
+                </li>
+                <li data-tags="cities">
+                    <a href="https://github.com/JustHomka/minimalistic-website-template" target="_blank">Частина 2 | Про міста</a>
+                </li>
+            </ul>
         </section>
         <footer>
             <p>©FlipSide Team & @JustHomka on GitHub</p>
@@ -72,6 +75,17 @@
         }
         function rp_laws() {
             window.location.href = "https://mc.flipside.net.ua/servers/rp/laws.html";
+        }
+        /* tags */
+        function filterByTag(tag) {
+            const repositoryItems = document.querySelectorAll('.repository-list li');
+            repositoryItems.forEach(item => {
+                if (tag === 'all' || item.dataset.tags.includes(tag)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
         }
     </script>
 </body>
